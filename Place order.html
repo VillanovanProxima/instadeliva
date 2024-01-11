@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+
+<head>
+<title>Contact Form</title>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+(function(){
+emailjs.init("your_user_id"); // Replace 'your_user_id' with your EmailJS user ID
+})();
+function sendEmail(e) {
+e.preventDefault();
+emailjs.sendForm('service_5uapypz', 'template_pz36819', '#contactForm')
+.then(function(response) {
+alert('Message sent successfully!');
+}, function(error) {
+alert('Message did not send: ', error);
+});
+}
+</script>
+</head>
+<body>
+    <center>
+<h2>Make an Order</h2>
+<form id="contactForm" onsubmit="sendEmail(event)">
+<div>
+<label for="name">Name:</label><br>
+<input type="text" id="name" name="name"><br>
+<br><br></div>
+<div>
+<label for="email">Email:</label><br>
+<input type="text" id="email" name="email"><br><br></div
+<div>
+<label for="phone">Phone:</label><br>
+<input type="text" id="phone" name="phone"><br><br>
+</div>
+<div>
+<label for="product">Product of Interest:</label><br>
+<input type="text" id="product" name="product"><br><br></div>
+<br>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dropdown Box Example</title>
+</head>
+<body>
+<h2>Select Location:</h2>
+<select id="Location">
+<option value="Zana">Zana</option>
+<option value="Ndejje">Ndejje</option>
+<option value="Lubowa">Lubowa</option>
+<option value="Bunamwaya">Bunamwaya</option>
+</select>
+</body>
+<br>
+<button onclick="window.location.href='order.html'"<button class="lime-button">Order</button>
+</form>
+<style>
+    .text-lime green{
+        color: limegreen;
+    }
+    </style>
+<style>
+    .lime-button {
+        background-color: limegreen;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        padding: 24px 24px;
+        border-radius: 6px;
+    }
+    </style>
